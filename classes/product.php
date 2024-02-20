@@ -15,7 +15,7 @@
             string $category,
             int $stock,
             string $description = 'Not found',
-            int $ratings = null
+            $ratings = null
             )
         {
             $this->name = $name;
@@ -34,7 +34,12 @@
             
             $this->stock = $stock;
             $this->description = $description;
-            $this->ratings = $ratings;
+            
+            if($ratings > 0 && $ratings <= 5 && is_numeric($ratings)){
+                $this->ratings = $ratings;
+            }else{
+                throw new Exception('Errore! Inserisci un valore numerico tra 1 e 5.');
+            }
         }
     }
 ?>

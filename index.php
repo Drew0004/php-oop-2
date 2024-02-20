@@ -23,6 +23,12 @@
         echo '<h3 class="fw-bold text-center my-3" style="color: red;">'.$e->getMessage().'</h3>';
     }
 
+    try{
+        $testProductRating = new product('Prodotto', 'https://www.my-personaltrainer.it/2023/11/28/gatto-tabby_900x760.jpeg', 20, 'Cane', 100, 'lorem ipsum', 5);
+    } catch(Exception $e){
+        echo '<h3 class="fw-bold text-center my-3" style="color: red;">'.$e->getMessage().'</h3>';
+    }
+
     // echo '<hr>';
 
     // echo 'PRODOTTO CIBO';
