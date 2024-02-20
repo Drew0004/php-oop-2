@@ -11,6 +11,18 @@
     $products[] = $productOne;
     // var_dump($productOne);
 
+    try{
+        $testProductCategory = new product('Prodotto', 'https://www.my-personaltrainer.it/2023/11/28/gatto-tabby_900x760.jpeg', 20, 'pappagallo', 100, 'lorem ipsum', 3);
+    } catch(Exception $e){
+        echo '<h3 class="fw-bold text-center my-3" style="color: red;">'.$e->getMessage().'</h3>';
+    }
+
+    try{
+        $testProductPrice = new product('Prodotto', 'https://www.my-personaltrainer.it/2023/11/28/gatto-tabby_900x760.jpeg', 'ciao', 'gatto', 100, 'lorem ipsum', 3);
+    } catch(Exception $e){
+        echo '<h3 class="fw-bold text-center my-3" style="color: red;">'.$e->getMessage().'</h3>';
+    }
+
     // echo '<hr>';
 
     // echo 'PRODOTTO CIBO';
