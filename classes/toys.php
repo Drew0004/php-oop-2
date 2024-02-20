@@ -1,8 +1,9 @@
 <?php
     require_once __DIR__.'/product.php';
+    require_once __DIR__.'/../traits/HasMaterials.php';
 
     class toy extends product{
-        public $material;
+        use HasMaterial;
         public $isOutdoor;
         
         function __construct

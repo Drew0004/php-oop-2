@@ -68,6 +68,29 @@
                             <li>Descrizione: <?php echo $singleProduct->description?></li>
                             <li>Voti: <?php echo $singleProduct->ratings?></li>
                             <li>Classe: <?php echo get_class($singleProduct)?></li>
+                            <?php
+                                if (get_class($singleProduct) == 'toy') {
+                            ?>
+                                <li>
+                                    Materiale: <?php echo $singleProduct->material; ?>
+                                </li>
+                            <?php
+                                }
+                                else if (get_class($singleProduct) == 'food') {
+                            ?>
+                                <li>
+                                    Data di scadenza: <?php echo $singleProduct->expireDate; ?>
+                                </li>
+                            <?php
+                                }
+                                else if (get_class($singleProduct) == 'dogbed'){
+                            ?>
+                                <li>
+                                    Dimensioni: <?php echo $singleProduct->size; ?>
+                                </li>
+                            <?php
+                                }
+                            ?>
                         </ul>
                         <a href="#" class="btn btn-primary">Go somewhere</a>
                     </div>

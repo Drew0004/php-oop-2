@@ -1,8 +1,9 @@
 <?php
     require_once __DIR__.'/product.php';
+    require_once __DIR__.'/../traits/HasMaterials.php';
 
     class dogbed extends product{
-        public $material;
+        use HasMaterial;
         public $size;
         
         function __construct

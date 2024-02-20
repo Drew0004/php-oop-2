@@ -1,8 +1,9 @@
 <?php
     require_once __DIR__.'/product.php';
+    require_once __DIR__.'/../traits/HasExpire.php';
 
     class food extends product{
-        public $expireDate;
+        use HasExpire;
         public $flavor;
         public $kg;
         
@@ -15,7 +16,7 @@
             $stock, 
             $description,
             $ratings,
-            string $expireDate, 
+            string $expireDate,
             string $flavor, 
             int $kg
         )
