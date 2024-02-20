@@ -24,7 +24,7 @@
     }
 
     try{
-        $testProductRating = new product('Prodotto', 'https://www.my-personaltrainer.it/2023/11/28/gatto-tabby_900x760.jpeg', 20, 'Cane', 100, 'lorem ipsum', 5);
+        $testProductRating = new product('Prodotto', 'https://www.my-personaltrainer.it/2023/11/28/gatto-tabby_900x760.jpeg', 20, 'Cane', 100, 'lorem ipsum', -1);
     } catch(Exception $e){
         echo '<h3 class="fw-bold text-center my-3" style="color: red;">'.$e->getMessage().'</h3>';
     }

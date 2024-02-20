@@ -35,7 +35,7 @@
             $this->stock = $stock;
             $this->description = $description;
             
-            if($ratings > 0 && $ratings <= 5 && is_numeric($ratings)){
+            if($ratings > -1 && $ratings <= 5 && is_numeric($ratings)){
                 $this->ratings = $ratings;
             }else{
                 throw new Exception('Errore! Inserisci un valore numerico tra 1 e 5.');
